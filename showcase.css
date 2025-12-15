@@ -1,0 +1,78 @@
+/* =========================
+   Showcase Styles
+   Applies to Animation & Photoshop pages
+   ========================= */
+
+/* Project List Layout */
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* Individual Project Item */
+.project-list li {
+    position: relative;
+
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    padding: 20px;
+
+    transition:
+        border 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Project Hover Effect */
+.project-list li:hover {
+    border: 2px solid #bfbfbf;
+    transform: scale(1.03);
+}
+
+/* Project Thumbnails */
+.project-thumbnail {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+/* Project Links */
+.project-list a {
+    display: block;
+    height: 100%;
+    color: #2e2e2e;
+    font-weight: 500;
+}
+
+/* Back Button */
+.back-button {
+    display: inline-block;
+    margin: 30px 0 40px; /* top | left-right | bottom */
+    padding: 8px 14px;
+
+    background-color: #eeeeee;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+
+    font-size: 0.9rem;
+    color: #2e2e2e;
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #dddddd;
+    border-color: #bfbfbf;
+    text-decoration: none;
+}

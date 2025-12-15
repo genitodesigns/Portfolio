@@ -3,33 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Color Themes</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+    <title>Page Title</title>
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #333;
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f0f0f0;
-        }
-
-        img {
-            width: 200px;
-            height: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="sitewide.css">
+    <link rel="stylesheet" href="color-and-type.css">
 </head>
 <body>
 
@@ -61,46 +38,86 @@
     <section>
         <h2>Color Theme Examples</h2>
 
-        <table>
-            <tr>
-                <th>Color Theme</th>
-                <th>Description</th>
-                <th>Example Image</th>
-            </tr>
+<table>
+    <tr>
+        <th>Color Theme</th>
+        <th>Description</th>
+        <th class="color-palette">Color Palette</th>
+    </tr>
 
-            <tr>
-                <td>Monochromatic</td>
-                <td>A single hue with various tints, shades, and tones.</td>
-                <td><img src="Images/Color Themes/monochromatic.jpg" alt="Monochromatic Theme"></td>
-            </tr>
+    <tr>
+        <td>Monochromatic</td>
+        <td>
+            Uses variations of a single hue to create a cohesive and harmonious
+            design. This approach is often calm, clean, and visually unified.
+        </td>
+        <td class="color-palette">
+            <div class="swatch-row monochromatic">
+                <span></span><span></span><span></span><span></span>
+            </div>
+        </td>
+    </tr>
 
-            <tr>
-                <td>Analogous</td>
-                <td>Colors that sit next to each other on the color wheel.</td>
-                <td><img src="Images/Color Themes/analogous.jpg" alt="Analogous Theme"></td>
-            </tr>
+    <tr>
+        <td>Analogous</td>
+        <td>
+            Uses colors that sit next to each other on the color wheel. Analogous
+            palettes feel natural and are commonly used for smooth, pleasing designs.
+        </td>
+        <td class="color-palette">
+            <div class="swatch-row analogous">
+                <span></span><span></span><span></span><span></span>
+            </div>
+        </td>
+    </tr>
 
-            <tr>
-                <td>Complementary</td>
-                <td>Two colors that are opposite each other on the color wheel.</td>
-                <td><img src="Images/Color Themes/complementary.jpg" alt="Complementary Theme"></td>
-            </tr>
+    <tr>
+        <td>Complementary</td>
+        <td>
+            Uses colors opposite each other on the color wheel. This creates strong
+            contrast and visual energy, often used to draw attention.
+        </td>
+        <td class="color-palette">
+            <div class="swatch-row complementary">
+                <span></span><span></span>
+            </div>
+        </td>
+    </tr>
 
-            <tr>
-                <td>Triadic</td>
-                <td>Three colors evenly spaced on the color wheel.</td>
-                <td><img src="Images/Color Themes/triadic.jpg" alt="Triadic Theme"></td>
-            </tr>
+    <tr>
+        <td>Triadic</td>
+        <td>
+            Uses three evenly spaced colors on the color wheel. Triadic schemes
+            are vibrant while still maintaining balance.
+        </td>
+        <td class="color-palette">
+            <div class="swatch-row triadic">
+                <span></span><span></span><span></span><span></span>
+            </div>
+        </td>
+    </tr>
 
-            <tr>
-                <td>Tetradic (Double Complementary)</td>
-                <td>Four colors arranged as two complementary pairs.</td>
-                <td><img src="Images/Color Themes/tetradic.jpg" alt="Tetradic Theme"></td>
-            </tr>
-        </table>
+    <tr>
+        <td>Tetradic</td>
+        <td>
+            Uses two complementary color pairs. This scheme offers rich variety
+            and works well when one color is dominant and others support it.
+        </td>
+        <td class="color-palette">
+            <div class="swatch-row tetradic">
+                <span></span><span></span><span></span><span></span>
+            </div>
+        </td>
+    </tr>
+</table>
+
     </section>
 
-    <p><a href="color-theory-overview.html">Back to Color Theory Overview</a></p>
+        <p>
+            <a href="color-theory-overview.html" class="back-button">
+                ← Back to Color Theory Overview
+            </a>
+        </p>
 </main>
 
 <hr>
