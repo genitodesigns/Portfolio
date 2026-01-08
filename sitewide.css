@@ -2,24 +2,66 @@
    Sitewide Styles
    ========================= */
 
-/* Base Reset */
+/* =========================
+   Base Reset
+   ========================= */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Body & Typography */
-body {
-    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    background-color: #f9f9f7;
-    color: #2e2e2e;
-    line-height: 1.6;
+/* =========================
+   Theme (Light / Dark) + Font Size
+   ========================= */
+:root {
+    /* Colors */
+    --bg: #f9f9f7;
+    --text: #2e2e2e;
+    --nav-text: #3d3d3d;
+    --border: #dddddd;
+    --menu-bg: #ffffff;
+
+    --hover-bg: #dddddd;
+    --active-bg: #e9e3d8;
+
+    /* Typography */
+    --font-scale: 1; /* Medium default */
 }
 
-/* Links */
+/* Dark Mode Overrides */
+html[data-theme="dark"] {
+    --bg: #121212;
+    --text: #f2f2f2;
+    --nav-text: #f2f2f2;
+    --border: #333333;
+    --menu-bg: #1a1a1a;
+
+    --hover-bg: rgba(255, 255, 255, 0.10);
+    --active-bg: rgba(233, 227, 216, 0.25);
+}
+
+/* Font Size Options */
+html[data-font="sm"] { --font-scale: 0.9375; } /* ~15px */
+html[data-font="md"] { --font-scale: 1; }      /* 16px */
+html[data-font="lg"] { --font-scale: 1.125; }  /* ~18px */
+
+/* =========================
+   Body & Typography
+   ========================= */
+body {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: calc(16px * var(--font-scale));
+}
+
+/* =========================
+   Links
+   ========================= */
 a {
-    color: #2e2e2e;
+    color: var(--text);
     text-decoration: none;
 }
 
@@ -27,10 +69,12 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Header */
+/* =========================
+   Header
+   ========================= */
 header {
     padding: 40px 20px 20px;
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid var(--border);
     margin-bottom: 40px;
 }
 
@@ -39,17 +83,23 @@ header h1 {
     font-size: 2rem;
 }
 
-/* Navigation */
-nav ul {
+/* =========================
+   Navigation (with Dropdowns)
+   ========================= */
+nav ul.nav-list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
 
+/* Nav links */
 nav a {
     font-size: 0.95rem;
-    color: #3d3d3d;
+    color: var(--nav-text);
     padding: 6px 10px;
     border-radius: 4px;
     transition:
@@ -58,28 +108,117 @@ nav a {
         text-shadow 1.5s ease;
 }
 
+/* Hover */
 nav a:hover {
-    background-color: #dddddd;
-    color: #2e2e2e;
+    background-color: var(--hover-bg);
+    color: var(--text);
     text-decoration: none;
     text-shadow: 0.4px 0 0 currentColor;
 }
 
+/* Active link */
 nav a.active {
-    background-color: #e9e3d8;
-    color: #2e2e2e;
+    background-color: var(--active-bg);
+    color: var(--text);
     font-weight: 500;
     cursor: default;
 }
 
 nav a.active:hover {
-    background-color: #e9e3d8;
-    color: #2e2e2e;
+    background-color: var(--active-bg);
+    color: var(--text);
     text-decoration: none;
     text-shadow: none;
 }
 
-/* Main Content */
+/* Dropdown parents */
+nav .has-menu {
+    position: relative;
+}
+
+/* Dropdown toggle buttons */
+nav .menu-toggle {
+    font-size: 0.95rem;
+    color: var(--nav-text);
+    padding: 6px 10px;
+    border-radius: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition:
+        background-color 1.5s ease,
+        color 1.5s ease,
+        text-shadow 1.5s ease;
+}
+
+nav .menu-toggle:hover {
+    background-color: var(--hover-bg);
+    color: var(--text);
+    text-shadow: 0.4px 0 0 currentColor;
+}
+
+/* Focus (accessibility) */
+nav a:focus-visible,
+nav .menu-toggle:focus-visible,
+nav .menu a:focus-visible,
+nav .menu-item:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+/* Dropdown panel */
+nav .menu {
+    position: absolute;
+    top: calc(100% + 0.35rem);
+    left: 0;
+    min-width: 230px;
+    padding: 0.5rem;
+    margin: 0;
+    list-style: none;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--menu-bg);
+    z-index: 999;
+}
+
+/* Dropdown items */
+nav .menu a,
+nav .menu-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 0.6rem;
+    border-radius: 8px;
+    background: transparent;
+    border: none;
+    font: inherit;
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Dropdown hover */
+nav .menu a:hover,
+nav .menu-item:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+/* Dropdown labels & separators */
+nav .menu-label {
+    font-size: 0.85rem;
+    opacity: 0.75;
+    padding: 0.35rem 0.6rem;
+}
+
+nav .menu-sep {
+    height: 1px;
+    background: var(--border);
+    margin: 0.4rem 0;
+}
+
+/* =========================
+   Main Content
+   ========================= */
 main {
     max-width: 900px;
     margin: 0 auto;
@@ -91,12 +230,14 @@ section {
     margin-bottom: 40px;
 }
 
-/* Footer */
+/* =========================
+   Footer
+   ========================= */
 footer {
     margin-top: 60px;
     padding: 20px;
-    border-top: 1px solid #dddddd;
+    border-top: 1px solid var(--border);
     text-align: center;
     font-size: 0.9rem;
-    color: #6b6b6b;
+    color: var(--text);
 }

@@ -5,21 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="sitewide.css">
+    <script src="site.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="animation.html">Adobe Animation Projects</a></li>
-                    <li><a href="photoshop.html">Adobe Photoshop Projects</a></li>
-                    <li><a href="color-theory-overview.html">Color Theory Overview</a></li>
-                    <li><a href="typography-overview.html">Typography Overview</a></li>
-                </ul>
-            </nav>
-    </header>
+<header>
+  <h1>My Portfolio</h1>
+
+  <nav aria-label="Primary">
+    <ul class="nav-list">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+
+      <!-- Showcase dropdown -->
+      <li class="has-menu">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+          Showcase
+        </button>
+
+        <ul class="menu" hidden>
+          <li><a href="animation.html">Adobe Animation Projects</a></li>
+          <li><a href="photoshop.html">Adobe Photoshop Projects</a></li>
+        </ul>
+      </li>
+
+      <!-- Color & Type dropdown -->
+      <li class="has-menu">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+          Color &amp; Type
+        </button>
+
+        <ul class="menu" hidden>
+          <li><a href="color-theory-overview.html">Color Theory Overview</a></li>
+          <li><a href="typography-overview.html">Typography Overview</a></li>
+        </ul>
+      </li>
+
+      <!-- Theme dropdown -->
+      <li class="has-menu">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+          Theme
+        </button>
+
+        <ul class="menu" hidden>
+          <li class="menu-label">Mode</li>
+          <li><button class="menu-item" type="button" data-theme="light">Light</button></li>
+          <li><button class="menu-item" type="button" data-theme="dark">Dark</button></li>
+
+          <li class="menu-sep" role="separator"></li>
+
+          <li class="menu-label">Font Size</li>
+          <li><button class="menu-item" type="button" data-font="sm">Small</button></li>
+          <li><button class="menu-item" type="button" data-font="md">Medium</button></li>
+          <li><button class="menu-item" type="button" data-font="lg">Large</button></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
 
     <main>
         <section>
@@ -36,7 +78,7 @@
 
     <hr>
     <footer>
-        <p>&copy; 2025 Michael Genito. All rights reserved.</p>
+        <p>&copy; 2026 Michael Genito. All rights reserved.</p>
     </footer>
 </body>
 </html>

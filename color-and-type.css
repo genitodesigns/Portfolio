@@ -1,7 +1,14 @@
 /* =========================
    Color & Typography Styles
    Applies to Color Theory & Typography pages
+   Theme-ready (uses variables from sitewide.css)
    ========================= */
+
+/* Theme bridge: inherit sitewide theme variables */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}
 
 /* Page Content Width (slightly narrower for reading) */
 main {
@@ -12,19 +19,21 @@ main {
 h2 {
     font-size: 1.6rem;
     margin-bottom: 15px;
-    color: #2e2e2e;
+    color: var(--text);
 }
 
 h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #4a4a4a;
+    /* Slightly softer than main text, but theme-safe */
+    color: var(--nav-text);
 }
 
 /* Paragraphs */
 p {
     margin-bottom: 20px;
-    color: #3d3d3d;
+    /* Theme-safe body text */
+    color: var(--text);
 }
 
 /* Sub-navigation (within pages) */
@@ -40,12 +49,17 @@ section nav a {
     font-size: 0.9rem;
     padding: 6px 10px;
     border-radius: 4px;
-    background-color: #eeeeee;
-    color: #2e2e2e;
+
+    /* Theme-safe */
+    background-color: var(--menu-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+
+    text-decoration: none;
 }
 
 section nav a:hover {
-    background-color: #dcdcdc;
+    background-color: var(--hover-bg);
     text-decoration: none;
 }
 
@@ -60,18 +74,24 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 30px;
+
+    /* Theme-safe table background */
+    background: var(--menu-bg);
 }
 
 th {
-    background-color: #f0f0f0;
+    /* Theme-safe */
+    background-color: var(--menu-bg);
     text-align: left;
     padding: 12px;
-    border: 1px solid #dddddd;
+    border: 1px solid var(--border);
+    color: var(--text);
 }
 
 td {
     padding: 12px;
-    border: 1px solid #dddddd;
+    border: 1px solid var(--border);
+    color: var(--text);
 }
 
 .color-palette {
@@ -92,12 +112,13 @@ main img {
     margin-top: 30px;
     padding: 8px 14px;
 
-    background-color: #eeeeee;
-    border: 1px solid #d0d0d0;
+    /* Theme-safe */
+    background-color: var(--menu-bg);
+    border: 1px solid var(--border);
     border-radius: 4px;
 
     font-size: 0.9rem;
-    color: #2e2e2e;
+    color: var(--text);
     text-decoration: none;
 
     transition:
@@ -106,8 +127,8 @@ main img {
 }
 
 .back-button:hover {
-    background-color: #dddddd;
-    border-color: #bfbfbf;
+    background-color: var(--hover-bg);
+    border-color: var(--border);
     text-decoration: none;
 }
 
@@ -121,7 +142,9 @@ main img {
     height: 40px;
     border-radius: 4px;
     overflow: hidden;
-    border: 1px solid #dddddd;
+
+    /* Theme-safe border */
+    border: 1px solid var(--border);
 }
 
 .swatch-row span {
