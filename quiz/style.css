@@ -1,0 +1,89 @@
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  margin: 0;
+  padding: 5px 0 50px 0;
+}
+
+/* =========================
+   Quiz Layout
+   ========================= */
+
+.quiz-intro {
+  margin: 10px 0 20px;
+  font-style: italic;
+  color: #555;
+}
+
+.result-message {
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.quiz-list {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.question-text {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Options */
+label.option {
+  display: block;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+/* Free-form input */
+.free-form-input {
+  display: block;
+  margin-top: 8px;
+  padding: 6px;
+  width: 200px;
+}
+
+/* =========================
+   Incorrect Answers
+   ========================= */
+
+.question.incorrect {
+  border-color: #c0392b;
+  background-color: rgba(192, 57, 43, 0.08);
+}
+
+/* =========================
+   Submit & Score
+   ========================= */
+
+#submit-btn {
+  margin-top: 20px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.score-display {
+  margin-top: 20px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-weight: 600;
+}
