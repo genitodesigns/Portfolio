@@ -1,0 +1,11 @@
+/* Bootstrap-only overrides (loaded only by /bootstrap pages) */
+html[data-font="sm"] { font-size: 15px; }
+html[data-font="md"] { font-size: 16px; }
+html[data-font="lg"] { font-size: 18px; }
+
+/* Showcase cards: keep thumbnails consistent */
+.card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}

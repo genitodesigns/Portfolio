@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Color Themes</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Base site styles (shared) -->
+  <link rel="stylesheet" href="../sitewide.css">
+
+  <!-- Bootstrap overrides (bootstrap-only) -->
+  <link rel="stylesheet" href="bootstrap-overrides.css">
+</head>
+
+<body data-bootstrap="true">
+
+<header class="border-bottom">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container py-3">
+      <a class="navbar-brand fw-semibold" href="index.html">My Portfolio</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">Resume</a>
+          </li>
+
+          <!-- Showcase -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Showcase
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="animation.html">Adobe Animation Projects</a></li>
+              <li><a class="dropdown-item" href="photoshop.html">Adobe Photoshop Projects</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="../quiz/quiz-mine.html">Interactive Quiz</a></li>
+            </ul>
+          </li>
+
+          <!-- Color & Type -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Color &amp; Type
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="color-theory-overview.html">Color Theory Overview</a></li>
+              <li><a class="dropdown-item active" aria-current="page" href="color-themes.html">Color Themes</a></li>
+              <li><a class="dropdown-item" href="color-theory-article.html">Color Theory Article</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="typography-overview.html">Typography Overview</a></li>
+              <li><a class="dropdown-item" href="font-types-article.html">Font Types Article</a></li>
+              <li><a class="dropdown-item" href="typography-article.html">Typography Article</a></li>
+            </ul>
+          </li>
+
+          <!-- Theme -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Theme
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><h6 class="dropdown-header">Mode</h6></li>
+              <li><button class="dropdown-item" type="button" data-theme="light">Light</button></li>
+              <li><button class="dropdown-item" type="button" data-theme="dark">Dark</button></li>
+
+              <li><hr class="dropdown-divider"></li>
+
+              <li><h6 class="dropdown-header">Font Size</h6></li>
+              <li><button class="dropdown-item" type="button" data-font="sm">Small</button></li>
+              <li><button class="dropdown-item" type="button" data-font="md">Medium</button></li>
+              <li><button class="dropdown-item" type="button" data-font="lg">Large</button></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="container py-4">
+
+  <div class="row mb-4">
+    <div class="col-12">
+      <h1 class="h3 mb-2">Color Themes</h1>
+      <p class="text-body-secondary mb-0">
+        Below are five common color theme types used in design. Each theme includes a short description and a palette swatch.
+      </p>
+    </div>
+  </div>
+
+  <div class="card shadow-sm">
+    <div class="card-body">
+
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th scope="col" style="width: 18%;">Color Theme</th>
+              <th scope="col">Description</th>
+              <th scope="col" style="width: 28%;">Color Palette</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="fw-semibold">Monochromatic</td>
+              <td>
+                Uses variations of a single hue to create a cohesive and harmonious design. This approach is often calm, clean, and visually unified.
+              </td>
+              <td>
+                <div class="swatch-row monochromatic" aria-label="Monochromatic palette">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="fw-semibold">Analogous</td>
+              <td>
+                Uses colors that sit next to each other on the color wheel. Analogous palettes feel natural and are commonly used for smooth, pleasing designs.
+              </td>
+              <td>
+                <div class="swatch-row analogous" aria-label="Analogous palette">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="fw-semibold">Complementary</td>
+              <td>
+                Uses colors opposite each other on the color wheel. This creates strong contrast and visual energy, often used to draw attention.
+              </td>
+              <td>
+                <div class="swatch-row complementary" aria-label="Complementary palette">
+                  <span></span><span></span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="fw-semibold">Triadic</td>
+              <td>
+                Uses three evenly spaced colors on the color wheel. Triadic schemes are vibrant while still maintaining balance.
+              </td>
+              <td>
+                <div class="swatch-row triadic" aria-label="Triadic palette">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="fw-semibold">Tetradic</td>
+              <td>
+                Uses two complementary color pairs. This scheme offers rich variety and works well when one color is dominant and others support it.
+              </td>
+              <td>
+                <div class="swatch-row tetradic" aria-label="Tetradic palette">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-4">
+        <a href="color-theory-overview.html" class="btn btn-outline-secondary">
+          ← Back to Color Theory Overview
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="border-top mt-5">
+  <div class="container py-4 text-center">
+    <p class="mb-0">&copy; 2026 Michael Genito. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../site.js"></script>
+</body>
+</html>
