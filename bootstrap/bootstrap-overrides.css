@@ -9,3 +9,86 @@ html[data-font="lg"] { font-size: 18px; }
   height: 220px;
   object-fit: cover;
 }
+
+/* =========================
+   Carousel: make arrows visible
+   Applies to ALL Bootstrap carousels on the site
+   ========================= */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(100);
+}
+
+/* Optional: slightly larger hit area for carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 12%;
+}
+
+/* =========================
+   Expertise slideshow: prevent layout jump (SAFE)
+   Do NOT override .carousel-item display behavior.
+   ========================= */
+#expertiseCarousel .carousel-inner {
+  min-height: 420px;
+}
+
+/* Center the content inside each slide without breaking Bootstrap */
+#expertiseCarousel .carousel-item > div {
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Slightly taller on mobile because content stacks */
+@media (max-width: 576px) {
+  #expertiseCarousel .carousel-inner {
+    min-height: 560px;
+  }
+  #expertiseCarousel .carousel-item > div {
+    min-height: 560px;
+  }
+}
+
+/* =========================
+   Expertise carousel: keep arrows off the text
+   ========================= */
+
+/* Make the clickable overlay narrower so it doesn't cover content */
+#expertiseCarousel .carousel-control-prev,
+#expertiseCarousel .carousel-control-next {
+  width: 6%;
+}
+
+/* Nudge icons outward so they sit closer to the edge */
+#expertiseCarousel .carousel-control-prev-icon {
+  transform: translateX(-8px);
+}
+#expertiseCarousel .carousel-control-next-icon {
+  transform: translateX(8px);
+}
+
+/* On very small screens, keep the overlay a bit wider for usability */
+@media (max-width: 576px) {
+  #expertiseCarousel .carousel-control-prev,
+  #expertiseCarousel .carousel-control-next {
+    width: 10%;
+  }
+  #expertiseCarousel .carousel-control-prev-icon {
+    transform: translateX(-4px);
+  }
+  #expertiseCarousel .carousel-control-next-icon {
+    transform: translateX(4px);
+  }
+}
+
+/* =========================
+   CTA buttons: outline by default, blue on hover
+   ========================= */
+#expertiseCarousel .cta-hover-primary:hover,
+#expertiseCarousel .cta-hover-primary:focus {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #fff;
+}
